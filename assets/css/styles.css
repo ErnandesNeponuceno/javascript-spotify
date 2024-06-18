@@ -1,0 +1,179 @@
+@import url(global.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    background-color: #000;
+    font-family: var(--font-dm-sans);
+}
+
+
+/* ///////////////////////MAIN//////////////////////// */
+
+.main-container{
+    max-width: 80vw;
+    height: 100vh;
+    margin-left: 20rem;
+    margin-right: 3.5rem;
+}
+
+/*/////////////// TESTE CARDS ///////////////*/
+
+.thisis{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  flex-direction: column;
+  padding: 16px;
+}
+.thisis h1{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.thisis h2{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cards_new_artists{
+  display: flex;
+  align-items: flex-start;
+  background-color: #121212;
+  flex-direction: column;
+  color: #fff;
+  padding: 16px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.new_artists {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  border-radius: 10px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-between;
+  
+}
+
+
+.card, .card img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  height: 320px;
+  
+  border-radius: 15px;
+  cursor: pointer;
+  float: left; 
+  box-sizing: border-box;
+}
+
+/* .card img{
+  width: 100%;
+  height: 100%;
+} */
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #BBF2C8;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 100%;
+  z-index: 1;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border:none;
+  z-index: 1;
+}
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.contents__card {
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: transform 0.8s, background 0.8s, border 1s;
+ 
+}
+
+.contents__card:hover {
+  transform: scale(1.02);
+}
+
+.contents__card:hover .contents__image {
+  opacity: 0;
+}
+
+.contents__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+
+.card:nth-child(1):hover::after {
+  background-image: url("../img/playlist/paramore01.jpg");
+}
+
+.card:nth-child(2):hover::after {
+  background-image: url("../img/playlist/kings01.jpg");
+}
+
+.card:nth-child(3):hover::after {
+  background-image: url("../img/playlist/thescript01.jpg");
+}
+
+.card:nth-child(4):hover::after {
+  background-image: url("../img/playlist/one01.jpg");
+}
+
+@media screen and (max-width: 1024px){
+    .offer__list-item{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+  .card:nth-child(4) {
+    display: none;
+  }
+}
