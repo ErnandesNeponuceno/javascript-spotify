@@ -1,4 +1,3 @@
-
 :root{
 	/* FONT */
 	--font-dm-sans:"DM Sans", sans-serif;
@@ -7,8 +6,6 @@
 	--bg-icon:#131313;
 	--bg-arrow-color:rgba(0,0,0,7)
 }
-
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

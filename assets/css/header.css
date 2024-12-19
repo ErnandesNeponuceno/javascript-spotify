@@ -1,4 +1,3 @@
-
 .header-containner{
     display: flex;
     justify-content: space-between;
@@ -8,7 +7,6 @@
     border-radius: .5rem;
     background-color: #121212;
 }
-
 
 .header-containner .navigation{
     display: flex;
@@ -42,7 +40,6 @@
     background-color: #242424;
     border-radius: 31.25rem;
     border: 1px solid transparent;
-
 }
 
 .header__search img{
@@ -59,16 +56,14 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    outline: none;  /*  TIRA A MARCAÇÃO DA BORDA AO ESCREVER */
+    outline: none; 
 }
-
 
 .header__login {
     display: flex;
     align-items: center;
-  }
+}
   
-
 .header__login .subscribe{
     color: #a7a7a7;
     font-size: 1rem;

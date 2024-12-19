@@ -40,13 +40,25 @@
 /* FIM SCROLL */
 
 .offer__list-item {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  gap: 16px;
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 2.5rem;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  gap: 2rem;
+}
+
+.offer__list-item img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 60%;
+  transform: rotate(25deg) translate(18%, -2%);
+  box-shadow: 1px 1px 7px #222222;
 }
 
 .cards {
@@ -112,19 +124,6 @@
   background: rgb(60, 30, 80);
 }
 /* FIM COLOR CARDS */
-
-.offer__list-item img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: auto;
-  width: 60%;
-  transform: rotate(25deg) translate(18%, -2%);
-  box-shadow: 1px 1px 7px #222222;
- 
-}
-
-/* CARD ARTISTA */
 
 .artist {
   --column-count: 5;
@@ -235,4 +234,8 @@
   padding: 20px 40px;
 }
 
-
+@media screen and (max-width: 1024px){
+  .offer__list-item{
+      grid-template-columns: 1fr 1fr;
+  }
+}
